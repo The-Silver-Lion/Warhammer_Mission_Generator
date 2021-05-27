@@ -26,6 +26,54 @@ namespace Warhammer_Mission_Generator
 
         }
 
+        void Set_After_Attack_Selection()
+        {
+
+            lbl_Tracker.Text = "2";
+
+            btn_Selection_1.Visible = true;
+            btn_Selection_1.Enabled = true;
+            btn_Selection_1.Location = new Point(110, 247);
+
+            btn_Selection_2.Visible = true;
+            btn_Selection_2.Enabled = true;
+            btn_Selection_2.Location = new Point(330, 247);
+
+
+            btn_Selection_3.Visible = true;
+            btn_Selection_3.Enabled = true;
+            btn_Selection_3.Location = new Point(220, 247);
+            lbl_PlayerMessage.Visible = true;
+
+            if (lbl_IsAttacker.Text == "1")
+            {
+
+                lbl_Selector.Text = lbl_Name1.Text + " select your tactical maneuver:";
+                btn_Selection_1.Text = "Advance";
+                btn_Selection_2.Text = "Flank";
+                btn_Selection_3.Text = "Charge";
+                lbl_PlayerMessage.Text = lbl_Name2.Text + " should look away";
+
+            }
+            else if (lbl_IsAttacker.Text == "0")
+            {
+
+                lbl_Selector.Text = lbl_Name1.Text + " select your tactical maneuver:";
+                btn_Selection_1.Text = "Hold";
+                btn_Selection_2.Text = "Ambush";
+                btn_Selection_3.Text = "Counter";
+                lbl_PlayerMessage.Text = lbl_Name2.Text + " should look away";
+
+            }
+            else
+            {
+
+                Error_Message();
+
+            }
+
+        }
+
         string[] Download_Names()
         {
 
@@ -112,7 +160,10 @@ namespace Warhammer_Mission_Generator
                 btn_Submit.Enabled = false;
 
                 lbl_Mission.Visible = false;
-                lbl_Result.Visible = false; 
+                lbl_Result.Visible = false;
+                lbl_PlayerMessage.Visible = false;
+
+                lbl_Tracker.Text = "0";
 
             }
             else
@@ -169,6 +220,34 @@ namespace Warhammer_Mission_Generator
                 btn_Selection_2.Enabled = true;
                 btn_Selection_2.Location = new Point(276, 247);
                 btn_Selection_2.Text = "Attacker";
+
+            }
+
+        }
+
+        private void btn_Selection_1_Click(object sender, EventArgs e)
+        {
+
+            if (lbl_Tracker.Text == "1")
+            {
+
+
+                lbl_IsAttacker.Text = "0";
+                Set_After_Attack_Selection();
+
+            }
+
+        }
+
+        private void btn_Selection_2_Click(object sender, EventArgs e)
+        {
+
+            if (lbl_Tracker.Text == "1")
+            {
+
+
+                lbl_IsAttacker.Text = "1";
+                Set_After_Attack_Selection();
 
             }
 

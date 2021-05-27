@@ -49,6 +49,7 @@ namespace Warhammer_Mission_Generator
             this.btn_Close = new System.Windows.Forms.Button();
             this.ddl_Size = new System.Windows.Forms.ComboBox();
             this.lbl_IsAttacker = new System.Windows.Forms.Label();
+            this.lbl_PlayerMessage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_Title
@@ -145,13 +146,14 @@ namespace Warhammer_Mission_Generator
             this.btn_Selection_1.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_Selection_1.Enabled = false;
             this.btn_Selection_1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Selection_1.Location = new System.Drawing.Point(145, 247);
+            this.btn_Selection_1.Location = new System.Drawing.Point(110, 247);
             this.btn_Selection_1.Name = "btn_Selection_1";
             this.btn_Selection_1.Size = new System.Drawing.Size(104, 36);
             this.btn_Selection_1.TabIndex = 8;
             this.btn_Selection_1.Text = "*TEXT*";
             this.btn_Selection_1.UseVisualStyleBackColor = false;
             this.btn_Selection_1.Visible = false;
+            this.btn_Selection_1.Click += new System.EventHandler(this.btn_Selection_1_Click);
             // 
             // btn_Selection_2
             // 
@@ -159,13 +161,14 @@ namespace Warhammer_Mission_Generator
             this.btn_Selection_2.Enabled = false;
             this.btn_Selection_2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Selection_2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Selection_2.Location = new System.Drawing.Point(276, 247);
+            this.btn_Selection_2.Location = new System.Drawing.Point(330, 247);
             this.btn_Selection_2.Name = "btn_Selection_2";
             this.btn_Selection_2.Size = new System.Drawing.Size(104, 36);
             this.btn_Selection_2.TabIndex = 9;
             this.btn_Selection_2.Text = "*TEXT*";
             this.btn_Selection_2.UseVisualStyleBackColor = false;
             this.btn_Selection_2.Visible = false;
+            this.btn_Selection_2.Click += new System.EventHandler(this.btn_Selection_2_Click);
             // 
             // lbl_Tracker
             // 
@@ -195,7 +198,7 @@ namespace Warhammer_Mission_Generator
             // 
             this.lbl_Mission.AutoSize = true;
             this.lbl_Mission.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Mission.Location = new System.Drawing.Point(55, 394);
+            this.lbl_Mission.Location = new System.Drawing.Point(53, 403);
             this.lbl_Mission.Name = "lbl_Mission";
             this.lbl_Mission.Size = new System.Drawing.Size(151, 31);
             this.lbl_Mission.TabIndex = 12;
@@ -206,7 +209,7 @@ namespace Warhammer_Mission_Generator
             // 
             this.lbl_Result.AutoSize = true;
             this.lbl_Result.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Result.Location = new System.Drawing.Point(55, 440);
+            this.lbl_Result.Location = new System.Drawing.Point(55, 357);
             this.lbl_Result.Name = "lbl_Result";
             this.lbl_Result.Size = new System.Drawing.Size(78, 23);
             this.lbl_Result.TabIndex = 13;
@@ -219,7 +222,7 @@ namespace Warhammer_Mission_Generator
             this.btn_Selection_3.Enabled = false;
             this.btn_Selection_3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Selection_3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Selection_3.Location = new System.Drawing.Point(423, 247);
+            this.btn_Selection_3.Location = new System.Drawing.Point(220, 247);
             this.btn_Selection_3.Name = "btn_Selection_3";
             this.btn_Selection_3.Size = new System.Drawing.Size(104, 36);
             this.btn_Selection_3.TabIndex = 14;
@@ -287,12 +290,24 @@ namespace Warhammer_Mission_Generator
             this.lbl_IsAttacker.Text = "2";
             this.lbl_IsAttacker.Visible = false;
             // 
+            // lbl_PlayerMessage
+            // 
+            this.lbl_PlayerMessage.AutoSize = true;
+            this.lbl_PlayerMessage.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_PlayerMessage.Location = new System.Drawing.Point(55, 301);
+            this.lbl_PlayerMessage.Name = "lbl_PlayerMessage";
+            this.lbl_PlayerMessage.Size = new System.Drawing.Size(68, 19);
+            this.lbl_PlayerMessage.TabIndex = 20;
+            this.lbl_PlayerMessage.Text = "*TEXT* ";
+            this.lbl_PlayerMessage.Visible = false;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(557, 520);
+            this.Controls.Add(this.lbl_PlayerMessage);
             this.Controls.Add(this.lbl_IsAttacker);
             this.Controls.Add(this.ddl_Size);
             this.Controls.Add(this.btn_Close);
@@ -345,5 +360,6 @@ namespace Warhammer_Mission_Generator
         private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.ComboBox ddl_Size;
         private System.Windows.Forms.Label lbl_IsAttacker;
+        private System.Windows.Forms.Label lbl_PlayerMessage;
     }
 }
