@@ -143,5 +143,35 @@ namespace Warhammer_Mission_Generator
             File.Close();
 
         }
+
+        private void btn_Submit_Click(object sender, EventArgs e)
+        {
+
+            if (lbl_Tracker.Text == "0")
+            {
+
+                lbl_Tracker.Text = "1";
+
+                ddl_Size.Visible = false;
+                ddl_Size.Enabled = false;
+
+                btn_Submit.Visible = false;
+                btn_Submit.Enabled = false;
+
+                lbl_Selector.Text = lbl_Name1.Text + " are you the...?";
+
+                btn_Selection_1.Visible = true;
+                btn_Selection_1.Enabled = true;
+                btn_Selection_1.Location = new Point(145, 247);
+                btn_Selection_1.Text = "Defender";
+
+                btn_Selection_2.Visible = true;
+                btn_Selection_2.Enabled = true;
+                btn_Selection_2.Location = new Point(276, 247);
+                btn_Selection_2.Text = "Attacker";
+
+            }
+
+        }
     }
 }

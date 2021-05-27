@@ -48,6 +48,7 @@ namespace Warhammer_Mission_Generator
             this.lbl_Player_2_Selection = new System.Windows.Forms.Label();
             this.btn_Close = new System.Windows.Forms.Button();
             this.ddl_Size = new System.Windows.Forms.ComboBox();
+            this.lbl_IsAttacker = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_Title
@@ -134,9 +135,9 @@ namespace Warhammer_Mission_Generator
             this.lbl_Selector.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Selector.Location = new System.Drawing.Point(55, 202);
             this.lbl_Selector.Name = "lbl_Selector";
-            this.lbl_Selector.Size = new System.Drawing.Size(139, 19);
+            this.lbl_Selector.Size = new System.Drawing.Size(68, 19);
             this.lbl_Selector.TabIndex = 7;
-            this.lbl_Selector.Text = "*PLAYER1* is the:";
+            this.lbl_Selector.Text = "*TEXT* ";
             this.lbl_Selector.Visible = false;
             // 
             // btn_Selection_1
@@ -169,11 +170,11 @@ namespace Warhammer_Mission_Generator
             // lbl_Tracker
             // 
             this.lbl_Tracker.AutoSize = true;
-            this.lbl_Tracker.Location = new System.Drawing.Point(36, 260);
+            this.lbl_Tracker.Location = new System.Drawing.Point(36, 247);
             this.lbl_Tracker.Name = "lbl_Tracker";
             this.lbl_Tracker.Size = new System.Drawing.Size(13, 13);
             this.lbl_Tracker.TabIndex = 10;
-            this.lbl_Tracker.Text = "2";
+            this.lbl_Tracker.Text = "0";
             this.lbl_Tracker.Visible = false;
             // 
             // btn_Submit
@@ -188,6 +189,7 @@ namespace Warhammer_Mission_Generator
             this.btn_Submit.Text = "*TEXT*";
             this.btn_Submit.UseVisualStyleBackColor = false;
             this.btn_Submit.Visible = false;
+            this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
             // 
             // lbl_Mission
             // 
@@ -275,12 +277,23 @@ namespace Warhammer_Mission_Generator
             this.ddl_Size.TabIndex = 18;
             this.ddl_Size.Visible = false;
             // 
+            // lbl_IsAttacker
+            // 
+            this.lbl_IsAttacker.AutoSize = true;
+            this.lbl_IsAttacker.Location = new System.Drawing.Point(36, 260);
+            this.lbl_IsAttacker.Name = "lbl_IsAttacker";
+            this.lbl_IsAttacker.Size = new System.Drawing.Size(13, 13);
+            this.lbl_IsAttacker.TabIndex = 19;
+            this.lbl_IsAttacker.Text = "2";
+            this.lbl_IsAttacker.Visible = false;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(557, 520);
+            this.Controls.Add(this.lbl_IsAttacker);
             this.Controls.Add(this.ddl_Size);
             this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.lbl_Player_2_Selection);
@@ -331,5 +344,6 @@ namespace Warhammer_Mission_Generator
         private System.Windows.Forms.Label lbl_Player_2_Selection;
         private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.ComboBox ddl_Size;
+        private System.Windows.Forms.Label lbl_IsAttacker;
     }
 }
