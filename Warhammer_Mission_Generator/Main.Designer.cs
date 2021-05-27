@@ -65,7 +65,7 @@ namespace Warhammer_Mission_Generator
             this.btn_Activation.BackColor = System.Drawing.Color.Ivory;
             this.btn_Activation.Enabled = false;
             this.btn_Activation.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Activation.Location = new System.Drawing.Point(215, 71);
+            this.btn_Activation.Location = new System.Drawing.Point(215, 139);
             this.btn_Activation.Name = "btn_Activation";
             this.btn_Activation.Size = new System.Drawing.Size(109, 45);
             this.btn_Activation.TabIndex = 1;
@@ -78,7 +78,7 @@ namespace Warhammer_Mission_Generator
             // 
             this.lbl_Player1.AutoSize = true;
             this.lbl_Player1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player1.Location = new System.Drawing.Point(55, 131);
+            this.lbl_Player1.Location = new System.Drawing.Point(100, 72);
             this.lbl_Player1.Name = "lbl_Player1";
             this.lbl_Player1.Size = new System.Drawing.Size(74, 19);
             this.lbl_Player1.TabIndex = 2;
@@ -102,7 +102,7 @@ namespace Warhammer_Mission_Generator
             // 
             this.lbl_Name1.AutoSize = true;
             this.lbl_Name1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Name1.Location = new System.Drawing.Point(135, 131);
+            this.lbl_Name1.Location = new System.Drawing.Point(180, 72);
             this.lbl_Name1.Name = "lbl_Name1";
             this.lbl_Name1.Size = new System.Drawing.Size(81, 19);
             this.lbl_Name1.TabIndex = 4;
@@ -112,7 +112,7 @@ namespace Warhammer_Mission_Generator
             // 
             this.lbl_Name2.AutoSize = true;
             this.lbl_Name2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Name2.Location = new System.Drawing.Point(135, 165);
+            this.lbl_Name2.Location = new System.Drawing.Point(180, 106);
             this.lbl_Name2.Name = "lbl_Name2";
             this.lbl_Name2.Size = new System.Drawing.Size(81, 19);
             this.lbl_Name2.TabIndex = 6;
@@ -122,7 +122,7 @@ namespace Warhammer_Mission_Generator
             // 
             this.lbl_Player2.AutoSize = true;
             this.lbl_Player2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Player2.Location = new System.Drawing.Point(55, 165);
+            this.lbl_Player2.Location = new System.Drawing.Point(100, 106);
             this.lbl_Player2.Name = "lbl_Player2";
             this.lbl_Player2.Size = new System.Drawing.Size(74, 19);
             this.lbl_Player2.TabIndex = 5;
@@ -144,7 +144,7 @@ namespace Warhammer_Mission_Generator
             this.btn_Selection1.BackColor = System.Drawing.Color.OliveDrab;
             this.btn_Selection1.Enabled = false;
             this.btn_Selection1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Selection1.Location = new System.Drawing.Point(167, 247);
+            this.btn_Selection1.Location = new System.Drawing.Point(145, 247);
             this.btn_Selection1.Name = "btn_Selection1";
             this.btn_Selection1.Size = new System.Drawing.Size(104, 36);
             this.btn_Selection1.TabIndex = 8;
@@ -158,7 +158,7 @@ namespace Warhammer_Mission_Generator
             this.btn_Selection_2.Enabled = false;
             this.btn_Selection_2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Selection_2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_Selection_2.Location = new System.Drawing.Point(277, 247);
+            this.btn_Selection_2.Location = new System.Drawing.Point(276, 247);
             this.btn_Selection_2.Name = "btn_Selection_2";
             this.btn_Selection_2.Size = new System.Drawing.Size(104, 36);
             this.btn_Selection_2.TabIndex = 9;
@@ -181,7 +181,7 @@ namespace Warhammer_Mission_Generator
             this.btn_Submit.BackColor = System.Drawing.Color.Ivory;
             this.btn_Submit.Enabled = false;
             this.btn_Submit.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Submit.Location = new System.Drawing.Point(215, 301);
+            this.btn_Submit.Location = new System.Drawing.Point(205, 301);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(119, 45);
             this.btn_Submit.TabIndex = 11;
@@ -228,7 +228,7 @@ namespace Warhammer_Mission_Generator
             // btn_Player1_Selection
             // 
             this.btn_Player1_Selection.AutoSize = true;
-            this.btn_Player1_Selection.Location = new System.Drawing.Point(36, 135);
+            this.btn_Player1_Selection.Location = new System.Drawing.Point(81, 76);
             this.btn_Player1_Selection.Name = "btn_Player1_Selection";
             this.btn_Player1_Selection.Size = new System.Drawing.Size(13, 13);
             this.btn_Player1_Selection.TabIndex = 15;
@@ -238,7 +238,7 @@ namespace Warhammer_Mission_Generator
             // lbl_Player_2_Selection
             // 
             this.lbl_Player_2_Selection.AutoSize = true;
-            this.lbl_Player_2_Selection.Location = new System.Drawing.Point(36, 171);
+            this.lbl_Player_2_Selection.Location = new System.Drawing.Point(81, 112);
             this.lbl_Player_2_Selection.Name = "lbl_Player_2_Selection";
             this.lbl_Player_2_Selection.Size = new System.Drawing.Size(13, 13);
             this.lbl_Player_2_Selection.TabIndex = 16;

@@ -26,11 +26,29 @@ namespace Warhammer_Mission_Generator
             btn_Activation.Visible = true;
             btn_Activation.Text = "Begin";
 
-            btn_Settings.Visible = true;
-            btn_Settings.Enabled = true;
+            //btn_Settings.Visible = true;
+            //btn_Settings.Enabled = true;
 
             btn_Close.Visible = true;
             btn_Close.Enabled = true;
+
+            int iCount = 0;
+            string[] sPlayers = new string[2];
+
+            using (StreamReader sr = new StreamReader(@"..\Data\Players.txt"))
+            {
+
+                for (iCount = 0; iCount < 2; iCount++)
+                {
+
+                    sPlayers[iCount] = sr.ReadLine();
+
+                }
+
+            }
+
+            lbl_Name1.Text = sPlayers[0];
+            lbl_Name2.Text = sPlayers[1];
 
         }
 
