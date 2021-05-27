@@ -36,13 +36,13 @@ namespace Warhammer_Mission_Generator
             this.lbl_Name1 = new System.Windows.Forms.Label();
             this.lbl_Name2 = new System.Windows.Forms.Label();
             this.lbl_Player2 = new System.Windows.Forms.Label();
-            this.lbl_IsAttacker = new System.Windows.Forms.Label();
-            this.btn_Selection1 = new System.Windows.Forms.Button();
+            this.lbl_Selector = new System.Windows.Forms.Label();
+            this.btn_Selection_1 = new System.Windows.Forms.Button();
             this.btn_Selection_2 = new System.Windows.Forms.Button();
             this.lbl_Tracker = new System.Windows.Forms.Label();
             this.btn_Submit = new System.Windows.Forms.Button();
             this.lbl_Mission = new System.Windows.Forms.Label();
-            this.lbl_Steal = new System.Windows.Forms.Label();
+            this.lbl_Result = new System.Windows.Forms.Label();
             this.btn_Selection_3 = new System.Windows.Forms.Button();
             this.btn_Player1_Selection = new System.Windows.Forms.Label();
             this.lbl_Player_2_Selection = new System.Windows.Forms.Label();
@@ -128,29 +128,29 @@ namespace Warhammer_Mission_Generator
             this.lbl_Player2.TabIndex = 5;
             this.lbl_Player2.Text = "Player 2:";
             // 
-            // lbl_IsAttacker
+            // lbl_Selector
             // 
-            this.lbl_IsAttacker.AutoSize = true;
-            this.lbl_IsAttacker.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_IsAttacker.Location = new System.Drawing.Point(55, 202);
-            this.lbl_IsAttacker.Name = "lbl_IsAttacker";
-            this.lbl_IsAttacker.Size = new System.Drawing.Size(139, 19);
-            this.lbl_IsAttacker.TabIndex = 7;
-            this.lbl_IsAttacker.Text = "*PLAYER1* is the:";
-            this.lbl_IsAttacker.Visible = false;
+            this.lbl_Selector.AutoSize = true;
+            this.lbl_Selector.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Selector.Location = new System.Drawing.Point(55, 202);
+            this.lbl_Selector.Name = "lbl_Selector";
+            this.lbl_Selector.Size = new System.Drawing.Size(139, 19);
+            this.lbl_Selector.TabIndex = 7;
+            this.lbl_Selector.Text = "*PLAYER1* is the:";
+            this.lbl_Selector.Visible = false;
             // 
-            // btn_Selection1
+            // btn_Selection_1
             // 
-            this.btn_Selection1.BackColor = System.Drawing.Color.OliveDrab;
-            this.btn_Selection1.Enabled = false;
-            this.btn_Selection1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Selection1.Location = new System.Drawing.Point(145, 247);
-            this.btn_Selection1.Name = "btn_Selection1";
-            this.btn_Selection1.Size = new System.Drawing.Size(104, 36);
-            this.btn_Selection1.TabIndex = 8;
-            this.btn_Selection1.Text = "*TEXT*";
-            this.btn_Selection1.UseVisualStyleBackColor = false;
-            this.btn_Selection1.Visible = false;
+            this.btn_Selection_1.BackColor = System.Drawing.Color.OliveDrab;
+            this.btn_Selection_1.Enabled = false;
+            this.btn_Selection_1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Selection_1.Location = new System.Drawing.Point(145, 247);
+            this.btn_Selection_1.Name = "btn_Selection_1";
+            this.btn_Selection_1.Size = new System.Drawing.Size(104, 36);
+            this.btn_Selection_1.TabIndex = 8;
+            this.btn_Selection_1.Text = "*TEXT*";
+            this.btn_Selection_1.UseVisualStyleBackColor = false;
+            this.btn_Selection_1.Visible = false;
             // 
             // btn_Selection_2
             // 
@@ -200,16 +200,16 @@ namespace Warhammer_Mission_Generator
             this.lbl_Mission.Text = "*MISSION*";
             this.lbl_Mission.Visible = false;
             // 
-            // lbl_Steal
+            // lbl_Result
             // 
-            this.lbl_Steal.AutoSize = true;
-            this.lbl_Steal.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Steal.Location = new System.Drawing.Point(55, 440);
-            this.lbl_Steal.Name = "lbl_Steal";
-            this.lbl_Steal.Size = new System.Drawing.Size(78, 23);
-            this.lbl_Steal.TabIndex = 13;
-            this.lbl_Steal.Text = "*Steal*";
-            this.lbl_Steal.Visible = false;
+            this.lbl_Result.AutoSize = true;
+            this.lbl_Result.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Result.Location = new System.Drawing.Point(55, 440);
+            this.lbl_Result.Name = "lbl_Result";
+            this.lbl_Result.Size = new System.Drawing.Size(78, 23);
+            this.lbl_Result.TabIndex = 13;
+            this.lbl_Result.Text = "*Steal*";
+            this.lbl_Result.Visible = false;
             // 
             // btn_Selection_3
             // 
@@ -286,13 +286,13 @@ namespace Warhammer_Mission_Generator
             this.Controls.Add(this.lbl_Player_2_Selection);
             this.Controls.Add(this.btn_Player1_Selection);
             this.Controls.Add(this.btn_Selection_3);
-            this.Controls.Add(this.lbl_Steal);
+            this.Controls.Add(this.lbl_Result);
             this.Controls.Add(this.lbl_Mission);
             this.Controls.Add(this.btn_Submit);
             this.Controls.Add(this.lbl_Tracker);
             this.Controls.Add(this.btn_Selection_2);
-            this.Controls.Add(this.btn_Selection1);
-            this.Controls.Add(this.lbl_IsAttacker);
+            this.Controls.Add(this.btn_Selection_1);
+            this.Controls.Add(this.lbl_Selector);
             this.Controls.Add(this.lbl_Name2);
             this.Controls.Add(this.lbl_Player2);
             this.Controls.Add(this.lbl_Name1);
@@ -319,13 +319,13 @@ namespace Warhammer_Mission_Generator
         private System.Windows.Forms.Label lbl_Name1;
         private System.Windows.Forms.Label lbl_Name2;
         private System.Windows.Forms.Label lbl_Player2;
-        private System.Windows.Forms.Label lbl_IsAttacker;
-        private System.Windows.Forms.Button btn_Selection1;
+        private System.Windows.Forms.Label lbl_Selector;
+        private System.Windows.Forms.Button btn_Selection_1;
         private System.Windows.Forms.Button btn_Selection_2;
         private System.Windows.Forms.Label lbl_Tracker;
         private System.Windows.Forms.Button btn_Submit;
         private System.Windows.Forms.Label lbl_Mission;
-        private System.Windows.Forms.Label lbl_Steal;
+        private System.Windows.Forms.Label lbl_Result;
         private System.Windows.Forms.Button btn_Selection_3;
         private System.Windows.Forms.Label btn_Player1_Selection;
         private System.Windows.Forms.Label lbl_Player_2_Selection;
