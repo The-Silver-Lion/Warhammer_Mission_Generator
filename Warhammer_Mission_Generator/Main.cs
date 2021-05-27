@@ -132,6 +132,84 @@ namespace Warhammer_Mission_Generator
 
         }
 
+        private string[,] Download_Missions(string sAttackerWinner)
+        {
+
+            string[,] sMissions = new string[1,1]; ;
+            int iTotal = 0;
+            int iCount = 0;
+
+            if (sAttackerWinner == "0")
+            {
+
+                using (StreamReader sr = new StreamReader(@"..\Data\" + ddl_Size.Text + "/Attack_Advantage.txt"))
+                {
+
+                    iTotal = int.Parse(sr.ReadLine());
+                    sMissions = new string[iTotal, 2];
+
+                    for (iCount = 0; iCount < iTotal; iCount++)
+                    {
+
+                        sMissions[iCount, 0] = sr.ReadLine();
+                        sMissions[iCount, 1] = sr.ReadLine();
+
+                    }
+
+                }
+
+            }
+            else if (sAttackerWinner == "1")
+            {
+
+                using (StreamReader sr = new StreamReader(@"..\Data\" + ddl_Size.Text + "/Defender_Advantage.txt"))
+                {
+
+                    iTotal = int.Parse(sr.ReadLine());
+                    sMissions = new string[iTotal, 2];
+
+                    for (iCount = 0; iCount < iTotal; iCount++)
+                    {
+
+                        sMissions[iCount, 0] = sr.ReadLine();
+                        sMissions[iCount, 1] = sr.ReadLine();
+
+                    }
+
+                }
+
+            }
+            else if (sAttackerWinner == "2")
+            {
+
+                using (StreamReader sr = new StreamReader(@"..\Data\" + ddl_Size.Text + "/No_Advantage.txt"))
+                {
+
+                    iTotal = int.Parse(sr.ReadLine());
+                    sMissions = new string[iTotal, 2];
+
+                    for (iCount = 0; iCount < iTotal; iCount++)
+                    {
+
+                        sMissions[iCount, 0] = sr.ReadLine();
+                        sMissions[iCount, 1] = sr.ReadLine();
+
+                    }
+
+                }
+
+            }
+            else
+            {
+
+                Error_Message();
+
+            }
+
+            return sMissions;
+
+        }
+
         private string[] Download_Names()
         {
 
@@ -222,6 +300,7 @@ namespace Warhammer_Mission_Generator
                 btn_Submit.Enabled = false;
 
                 lbl_Mission.Visible = false;
+                lbl_Mission_Reference.Visible = false;
                 lbl_Result.Visible = false;
                 lbl_PlayerMessage.Visible = false;
 
@@ -289,22 +368,68 @@ namespace Warhammer_Mission_Generator
 
                 lbl_Tracker.Text = "5";
 
-                if((lbl_Player1_Selection.Text == "0" && lbl_Player2_Selection.Text == "1") || (lbl_Player1_Selection.Text == "1" && lbl_Player2_Selection.Text == "2") || (lbl_Player1_Selection.Text == "2" && lbl_Player2_Selection.Text == "0"))
+                lbl_Result.Visible = true;
+                lbl_Result.Location = new Point(55, 209);
+
+                btn_Submit.Location = new Point(203, 247);
+                btn_Submit.Size = new Size(136, 45);
+                btn_Submit.Text = "Generate";
+
+                if ((lbl_Player1_Selection.Text == "0" && lbl_Player2_Selection.Text == "1") || (lbl_Player1_Selection.Text == "1" && lbl_Player2_Selection.Text == "2") || (lbl_Player1_Selection.Text == "2" && lbl_Player2_Selection.Text == "0"))
                 {
 
                     lbl_Result.Text = lbl_Name1.Text + " has out maneuvered " + lbl_Name2.Text + "...";
 
+                    if (lbl_IsAttacker.Text == "1")
+                    {
+
+                        lbl_Attacker_Wins.Text = "1";
+
+                    }
+                    else if (lbl_IsAttacker.Text == "0")
+                    {
+
+                        lbl_Attacker_Wins.Text = "0";
+
+                    }
+                    else
+                    {
+
+                        Error_Message();
+
+                    }
+                    
                 }
                 else if ((lbl_Player1_Selection.Text == "0" && lbl_Player2_Selection.Text == "2") || (lbl_Player1_Selection.Text == "1" && lbl_Player2_Selection.Text == "0") || (lbl_Player1_Selection.Text == "2" && lbl_Player2_Selection.Text == "1"))
                 {
 
                     lbl_Result.Text = lbl_Name2.Text + " has out maneuvered " + lbl_Name1.Text + "...";
+                    if (lbl_IsAttacker.Text == "0")
+                    {
+
+                        lbl_Attacker_Wins.Text = "1";
+
+                    }
+                    else if (lbl_IsAttacker.Text == "1")
+                    {
+
+                        lbl_Attacker_Wins.Text = "1";
+
+                    }
+                    else 
+                    {
+
+                        Error_Message();
+                    
+                    }
 
                 }
                 else if ((lbl_Player1_Selection.Text == "0" && lbl_Player2_Selection.Text == "0") || (lbl_Player1_Selection.Text == "1" && lbl_Player2_Selection.Text == "1") || (lbl_Player1_Selection.Text == "2" && lbl_Player2_Selection.Text == "2"))
                 {
 
-                    lbl_Result.Text = "Neither force has been able to out maneuver the other, a might clash will commence...";
+                    lbl_Result.Location = new Point(25, 211);
+                    lbl_Result.Text = "Neither forces are out maneuvered, a might clash will commence...";
+                    lbl_Attacker_Wins.Text = "2";
 
                 }
                 else
@@ -314,18 +439,22 @@ namespace Warhammer_Mission_Generator
 
                 }
 
-                lbl_Result.Visible = true;
-                lbl_Result.Location = new Point(55, 209);
-
-                btn_Submit.Location = new Point(203, 247);
-                btn_Submit.Size = new Size(136, 45);
-                btn_Submit.Text = "Generate";
-
             }
             else if (lbl_Tracker.Text == "5")
             {
 
+                btn_Submit.Visible = false;
+                btn_Submit.Enabled = false;
 
+                lbl_Result.Visible = false;
+
+                string[,] sMissions;
+                Random rnd = new Random();
+                int iSize = 0;
+
+                sMissions = Download_Missions(lbl_Attacker_Wins.Text);
+                iSize = sMissions.GetLength(0);
+                //lbl_Mission.Text = rnd.Next(0, int.Parse(iSize));
 
             }
             else

@@ -50,6 +50,8 @@ namespace Warhammer_Mission_Generator
             this.ddl_Size = new System.Windows.Forms.ComboBox();
             this.lbl_IsAttacker = new System.Windows.Forms.Label();
             this.lbl_PlayerMessage = new System.Windows.Forms.Label();
+            this.lbl_Attacker_Wins = new System.Windows.Forms.Label();
+            this.lbl_Mission_Reference = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_Title
@@ -198,7 +200,7 @@ namespace Warhammer_Mission_Generator
             // 
             this.lbl_Mission.AutoSize = true;
             this.lbl_Mission.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Mission.Location = new System.Drawing.Point(53, 403);
+            this.lbl_Mission.Location = new System.Drawing.Point(53, 286);
             this.lbl_Mission.Name = "lbl_Mission";
             this.lbl_Mission.Size = new System.Drawing.Size(151, 31);
             this.lbl_Mission.TabIndex = 12;
@@ -208,12 +210,12 @@ namespace Warhammer_Mission_Generator
             // lbl_Result
             // 
             this.lbl_Result.AutoSize = true;
-            this.lbl_Result.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Result.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Result.Location = new System.Drawing.Point(55, 209);
             this.lbl_Result.Name = "lbl_Result";
-            this.lbl_Result.Size = new System.Drawing.Size(78, 23);
+            this.lbl_Result.Size = new System.Drawing.Size(69, 19);
             this.lbl_Result.TabIndex = 13;
-            this.lbl_Result.Text = "*Steal*";
+            this.lbl_Result.Text = "*Result*";
             this.lbl_Result.Visible = false;
             // 
             // btn_Selection_3
@@ -300,12 +302,34 @@ namespace Warhammer_Mission_Generator
             this.lbl_PlayerMessage.Text = "*TEXT* ";
             this.lbl_PlayerMessage.Visible = false;
             // 
+            // lbl_Attacker_Wins
+            // 
+            this.lbl_Attacker_Wins.AutoSize = true;
+            this.lbl_Attacker_Wins.Location = new System.Drawing.Point(36, 273);
+            this.lbl_Attacker_Wins.Name = "lbl_Attacker_Wins";
+            this.lbl_Attacker_Wins.Size = new System.Drawing.Size(13, 13);
+            this.lbl_Attacker_Wins.TabIndex = 21;
+            this.lbl_Attacker_Wins.Text = "0";
+            // 
+            // lbl_Mission_Reference
+            // 
+            this.lbl_Mission_Reference.AutoSize = true;
+            this.lbl_Mission_Reference.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Mission_Reference.Location = new System.Drawing.Point(69, 320);
+            this.lbl_Mission_Reference.Name = "lbl_Mission_Reference";
+            this.lbl_Mission_Reference.Size = new System.Drawing.Size(68, 19);
+            this.lbl_Mission_Reference.TabIndex = 22;
+            this.lbl_Mission_Reference.Text = "*TEXT* ";
+            this.lbl_Mission_Reference.Visible = false;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(557, 520);
+            this.Controls.Add(this.lbl_Mission_Reference);
+            this.Controls.Add(this.lbl_Attacker_Wins);
             this.Controls.Add(this.lbl_PlayerMessage);
             this.Controls.Add(this.lbl_IsAttacker);
             this.Controls.Add(this.ddl_Size);
@@ -360,5 +384,7 @@ namespace Warhammer_Mission_Generator
         private System.Windows.Forms.ComboBox ddl_Size;
         private System.Windows.Forms.Label lbl_IsAttacker;
         private System.Windows.Forms.Label lbl_PlayerMessage;
+        private System.Windows.Forms.Label lbl_Attacker_Wins;
+        private System.Windows.Forms.Label lbl_Mission_Reference;
     }
 }
