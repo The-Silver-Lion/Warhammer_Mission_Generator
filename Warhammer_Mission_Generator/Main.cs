@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Warhammer_Mission_Generator
 {
-    public partial class frmMain : Form
+    public partial class frm_Main : Form
     {
-        public frmMain()
+        public frm_Main()
         {
             InitializeComponent();
+        }
+
+        private void btn_Defender_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Attacker_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

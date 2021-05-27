@@ -16,7 +16,7 @@ namespace Warhammer_Mission_Generator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new frm_Main());
         }
     }
 }
