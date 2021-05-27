@@ -95,6 +95,8 @@ namespace Warhammer_Mission_Generator
             this.btn_Settings.TabIndex = 3;
             this.btn_Settings.Text = "Settings";
             this.btn_Settings.UseVisualStyleBackColor = false;
+            this.btn_Settings.Visible = false;
+            this.btn_Settings.Click += new System.EventHandler(this.btn_Settings_Click);
             // 
             // lbl_Name1
             // 
@@ -254,6 +256,7 @@ namespace Warhammer_Mission_Generator
             this.btn_Close.TabIndex = 17;
             this.btn_Close.Text = "Close";
             this.btn_Close.UseVisualStyleBackColor = false;
+            this.btn_Close.Visible = false;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
             // ddl_Size

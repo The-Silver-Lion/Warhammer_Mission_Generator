@@ -24,8 +24,12 @@ namespace Warhammer_Mission_Generator
 
             btn_Activation.Enabled = true;
             btn_Activation.Visible = true;
+            btn_Activation.Text = "Begin";
 
+            btn_Settings.Visible = true;
             btn_Settings.Enabled = true;
+
+            btn_Close.Visible = true;
             btn_Close.Enabled = true;
 
         }
@@ -33,13 +37,7 @@ namespace Warhammer_Mission_Generator
         private void btn_Activation_Click(object sender, EventArgs e)
         {
 
-            StreamWriter File = new StreamWriter("TEST.txt");
-
-            File.Write("1");
-            File.Write("2" + "\r\n");
-            File.Write("3" + "\r\n");
-            File.Write("4" + ".\r\n\r\n");
-            File.Close();
+            
 
         }
 
@@ -47,6 +45,19 @@ namespace Warhammer_Mission_Generator
         {
 
             this.Close();
+
+        }
+
+        private void btn_Settings_Click(object sender, EventArgs e)
+        {
+
+            StreamWriter File = new StreamWriter(@"..\Data\Test.txt");
+
+            File.Write("1");
+            File.Write("2" + "\r\n");
+            File.Write("3" + "\r\n");
+            File.Write("4" + ".\r\n\r\n");
+            File.Close();
 
         }
     }
