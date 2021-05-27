@@ -450,12 +450,12 @@ namespace Warhammer_Mission_Generator
 
                 string[,] sMissions;
                 Random rnd = new Random();
-                int iSize = 0;
 
                 sMissions = Download_Missions(lbl_Attacker_Wins.Text);
-                iSize = sMissions.GetLength(0);
-                //lbl_Mission.Text = rnd.Next(0, int.Parse(iSize));
+                lbl_Mission.Text = rnd.Next(0, sMissions.GetLength(0)).ToString();
 
+                //MAKE SELECTION STATEMENTS
+                
             }
             else
             {
