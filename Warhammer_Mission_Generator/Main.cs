@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Windows;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,13 +19,34 @@ namespace Warhammer_Mission_Generator
             InitializeComponent();
         }
 
-        private void btn_Defender_Click(object sender, EventArgs e)
+        private void frm_Main_Load(object sender, EventArgs e)
         {
+
+            btn_Activation.Enabled = true;
+            btn_Activation.Visible = true;
+
+            btn_Settings.Enabled = true;
+            btn_Close.Enabled = true;
 
         }
 
-        private void btn_Attacker_Click(object sender, EventArgs e)
+        private void btn_Activation_Click(object sender, EventArgs e)
         {
+
+            StreamWriter File = new StreamWriter("TEST.txt");
+
+            File.Write("1");
+            File.Write("2" + "\r\n");
+            File.Write("3" + "\r\n");
+            File.Write("4" + ".\r\n\r\n");
+            File.Close();
+
+        }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
 
         }
     }
