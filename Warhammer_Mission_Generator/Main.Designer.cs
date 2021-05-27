@@ -44,8 +44,8 @@ namespace Warhammer_Mission_Generator
             this.lbl_Mission = new System.Windows.Forms.Label();
             this.lbl_Result = new System.Windows.Forms.Label();
             this.btn_Selection_3 = new System.Windows.Forms.Button();
-            this.btn_Player1_Selection = new System.Windows.Forms.Label();
-            this.lbl_Player_2_Selection = new System.Windows.Forms.Label();
+            this.lbl_Player1_Selection = new System.Windows.Forms.Label();
+            this.lbl_Player2_Selection = new System.Windows.Forms.Label();
             this.btn_Close = new System.Windows.Forms.Button();
             this.ddl_Size = new System.Windows.Forms.ComboBox();
             this.lbl_IsAttacker = new System.Windows.Forms.Label();
@@ -185,9 +185,9 @@ namespace Warhammer_Mission_Generator
             this.btn_Submit.BackColor = System.Drawing.Color.Ivory;
             this.btn_Submit.Enabled = false;
             this.btn_Submit.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Submit.Location = new System.Drawing.Point(205, 301);
+            this.btn_Submit.Location = new System.Drawing.Point(215, 196);
             this.btn_Submit.Name = "btn_Submit";
-            this.btn_Submit.Size = new System.Drawing.Size(119, 45);
+            this.btn_Submit.Size = new System.Drawing.Size(109, 45);
             this.btn_Submit.TabIndex = 11;
             this.btn_Submit.Text = "*TEXT*";
             this.btn_Submit.UseVisualStyleBackColor = false;
@@ -209,7 +209,7 @@ namespace Warhammer_Mission_Generator
             // 
             this.lbl_Result.AutoSize = true;
             this.lbl_Result.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Result.Location = new System.Drawing.Point(55, 357);
+            this.lbl_Result.Location = new System.Drawing.Point(55, 209);
             this.lbl_Result.Name = "lbl_Result";
             this.lbl_Result.Size = new System.Drawing.Size(78, 23);
             this.lbl_Result.TabIndex = 13;
@@ -229,26 +229,25 @@ namespace Warhammer_Mission_Generator
             this.btn_Selection_3.Text = "*TEXT*";
             this.btn_Selection_3.UseVisualStyleBackColor = false;
             this.btn_Selection_3.Visible = false;
+            this.btn_Selection_3.Click += new System.EventHandler(this.btn_Selection_3_Click);
             // 
-            // btn_Player1_Selection
+            // lbl_Player1_Selection
             // 
-            this.btn_Player1_Selection.AutoSize = true;
-            this.btn_Player1_Selection.Location = new System.Drawing.Point(81, 76);
-            this.btn_Player1_Selection.Name = "btn_Player1_Selection";
-            this.btn_Player1_Selection.Size = new System.Drawing.Size(13, 13);
-            this.btn_Player1_Selection.TabIndex = 15;
-            this.btn_Player1_Selection.Text = "0";
-            this.btn_Player1_Selection.Visible = false;
+            this.lbl_Player1_Selection.AutoSize = true;
+            this.lbl_Player1_Selection.Location = new System.Drawing.Point(81, 76);
+            this.lbl_Player1_Selection.Name = "lbl_Player1_Selection";
+            this.lbl_Player1_Selection.Size = new System.Drawing.Size(13, 13);
+            this.lbl_Player1_Selection.TabIndex = 15;
+            this.lbl_Player1_Selection.Text = "0";
             // 
-            // lbl_Player_2_Selection
+            // lbl_Player2_Selection
             // 
-            this.lbl_Player_2_Selection.AutoSize = true;
-            this.lbl_Player_2_Selection.Location = new System.Drawing.Point(81, 112);
-            this.lbl_Player_2_Selection.Name = "lbl_Player_2_Selection";
-            this.lbl_Player_2_Selection.Size = new System.Drawing.Size(13, 13);
-            this.lbl_Player_2_Selection.TabIndex = 16;
-            this.lbl_Player_2_Selection.Text = "0";
-            this.lbl_Player_2_Selection.Visible = false;
+            this.lbl_Player2_Selection.AutoSize = true;
+            this.lbl_Player2_Selection.Location = new System.Drawing.Point(81, 112);
+            this.lbl_Player2_Selection.Name = "lbl_Player2_Selection";
+            this.lbl_Player2_Selection.Size = new System.Drawing.Size(13, 13);
+            this.lbl_Player2_Selection.TabIndex = 16;
+            this.lbl_Player2_Selection.Text = "0";
             // 
             // btn_Close
             // 
@@ -311,8 +310,8 @@ namespace Warhammer_Mission_Generator
             this.Controls.Add(this.lbl_IsAttacker);
             this.Controls.Add(this.ddl_Size);
             this.Controls.Add(this.btn_Close);
-            this.Controls.Add(this.lbl_Player_2_Selection);
-            this.Controls.Add(this.btn_Player1_Selection);
+            this.Controls.Add(this.lbl_Player2_Selection);
+            this.Controls.Add(this.lbl_Player1_Selection);
             this.Controls.Add(this.btn_Selection_3);
             this.Controls.Add(this.lbl_Result);
             this.Controls.Add(this.lbl_Mission);
@@ -355,8 +354,8 @@ namespace Warhammer_Mission_Generator
         private System.Windows.Forms.Label lbl_Mission;
         private System.Windows.Forms.Label lbl_Result;
         private System.Windows.Forms.Button btn_Selection_3;
-        private System.Windows.Forms.Label btn_Player1_Selection;
-        private System.Windows.Forms.Label lbl_Player_2_Selection;
+        private System.Windows.Forms.Label lbl_Player1_Selection;
+        private System.Windows.Forms.Label lbl_Player2_Selection;
         private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.ComboBox ddl_Size;
         private System.Windows.Forms.Label lbl_IsAttacker;
