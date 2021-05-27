@@ -289,10 +289,22 @@ namespace Warhammer_Mission_Generator
 
                 lbl_Tracker.Text = "5";
 
-                if((lbl_Player1_Selection.Text == "2" && lbl_Player2_Selection.Text == "0") || (lbl_Player1_Selection.Text == "2" && lbl_Player2_Selection.Text == "2") || (lbl_Player1_Selection.Text == "2" && lbl_Player2_Selection.Text == "1"))
+                if((lbl_Player1_Selection.Text == "0" && lbl_Player2_Selection.Text == "1") || (lbl_Player1_Selection.Text == "1" && lbl_Player2_Selection.Text == "2") || (lbl_Player1_Selection.Text == "2" && lbl_Player2_Selection.Text == "0"))
                 {
 
+                    lbl_Result.Text = lbl_Name1.Text + " has out maneuvered " + lbl_Name2.Text + "...";
 
+                }
+                else if ((lbl_Player1_Selection.Text == "0" && lbl_Player2_Selection.Text == "2") || (lbl_Player1_Selection.Text == "1" && lbl_Player2_Selection.Text == "0") || (lbl_Player1_Selection.Text == "2" && lbl_Player2_Selection.Text == "1"))
+                {
+
+                    lbl_Result.Text = lbl_Name2.Text + " has out maneuvered " + lbl_Name1.Text + "...";
+
+                }
+                else if ((lbl_Player1_Selection.Text == "0" && lbl_Player2_Selection.Text == "0") || (lbl_Player1_Selection.Text == "1" && lbl_Player2_Selection.Text == "1") || (lbl_Player1_Selection.Text == "2" && lbl_Player2_Selection.Text == "2"))
+                {
+
+                    lbl_Result.Text = "Neither force has been able to out maneuver the other, a might clash will commence...";
 
                 }
                 else
@@ -304,7 +316,6 @@ namespace Warhammer_Mission_Generator
 
                 lbl_Result.Visible = true;
                 lbl_Result.Location = new Point(55, 209);
-                lbl_Result.Text = "STOLEN";
 
                 btn_Submit.Location = new Point(203, 247);
                 btn_Submit.Size = new Size(136, 45);
