@@ -724,8 +724,6 @@ namespace Warhammer_Mission_Generator
                 btn_Submit.Size = new Size(136, 45);
                 btn_Submit.Text = "Generate";
 
-                lbl_CP_Paid.Text = lbl_Name1 + " paid: " + lbl_Player_1_CP.Text + ", " + lbl_Name2 + " paid: " + lbl_Player_2_CP.Text;
-
                 if ((lbl_Player1_Selection.Text == "0" && lbl_Player2_Selection.Text == "1") || (lbl_Player1_Selection.Text == "1" && lbl_Player2_Selection.Text == "2") || (lbl_Player1_Selection.Text == "2" && lbl_Player2_Selection.Text == "0"))
                 {
 
@@ -800,7 +798,8 @@ namespace Warhammer_Mission_Generator
                 btn_Submit.Text =  "Played";
 
                 lbl_Result.Visible = false;
-                lbl_CP_Paid.Visible = false;
+                lbl_CP_Paid.Text = lbl_Name1 + " paid: " + lbl_Player_1_CP.Text + ", " + lbl_Name2 + " paid: " + lbl_Player_2_CP.Text;
+                lbl_CP_Paid.Visible = true;
 
                 MyMissions.m_MyMissions = Download_Next_Missions();
                 MyMissions.m_iSelected = rnd.Next(0, MyMissions.m_MyMissions.Count);
@@ -819,6 +818,7 @@ namespace Warhammer_Mission_Generator
                 Save_Complete_Missions();
                 Save_Next_Missions();
 
+                lbl_CP_Paid.Visible = false;
                 btn_Submit.Visible = false;
                 lbl_Mission_Reference.Visible = false;
                 lbl_Mission.Text = "Missions have been rotated!";
