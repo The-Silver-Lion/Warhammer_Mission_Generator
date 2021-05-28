@@ -158,7 +158,7 @@ namespace Warhammer_Mission_Generator
             if (lbl_Attacker_Wins.Text == "0")
             {
 
-                StreamWriter MainFile = new StreamWriter(@"..\Data\" + ddl_Size.Text + "/Played/Defender_Advantage.txt");
+                StreamWriter MainFile = new StreamWriter(@"Data\" + ddl_Size.Text + "/Played/Defender_Advantage.txt");
 
                 for (iCount = 0; iCount < Complete_Missions.Count; iCount++)
                 {
@@ -174,7 +174,7 @@ namespace Warhammer_Mission_Generator
             else if (lbl_Attacker_Wins.Text == "1")
             {
 
-                StreamWriter MainFile = new StreamWriter(@"..\Data\" + ddl_Size.Text + "/Played/Attacker_Advantage.txt");
+                StreamWriter MainFile = new StreamWriter(@"Data\" + ddl_Size.Text + "/Played/Attacker_Advantage.txt");
 
                 for (iCount = 0; iCount < Complete_Missions.Count; iCount++)
                 {
@@ -190,7 +190,7 @@ namespace Warhammer_Mission_Generator
             else if (lbl_Attacker_Wins.Text == "2")
             {
 
-                StreamWriter MainFile = new StreamWriter(@"..\Data\" + ddl_Size.Text + "/Played/No_Advantage.txt");
+                StreamWriter MainFile = new StreamWriter(@"Data\" + ddl_Size.Text + "/Played/No_Advantage.txt");
 
                 for (iCount = 0; iCount < Complete_Missions.Count; iCount++)
                 {
@@ -221,7 +221,7 @@ namespace Warhammer_Mission_Generator
             if (lbl_Attacker_Wins.Text == "0")
             {
 
-                StreamWriter MainFile = new StreamWriter(@"..\Data\" + ddl_Size.Text + "/Defender_Advantage.txt");
+                StreamWriter MainFile = new StreamWriter(@"Data\" + ddl_Size.Text + "/Defender_Advantage.txt");
 
                 for (iCount = 0; iCount < MyMissions.m_MyMissions.Count; iCount++)
                 {
@@ -237,7 +237,7 @@ namespace Warhammer_Mission_Generator
             else if (lbl_Attacker_Wins.Text == "1")
             {
 
-                StreamWriter MainFile = new StreamWriter(@"..\Data\" + ddl_Size.Text + "/Attacker_Advantage.txt");
+                StreamWriter MainFile = new StreamWriter(@"Data\" + ddl_Size.Text + "/Attacker_Advantage.txt");
 
                 for (iCount = 0; iCount < MyMissions.m_MyMissions.Count; iCount++)
                 {
@@ -253,7 +253,7 @@ namespace Warhammer_Mission_Generator
             else if (lbl_Attacker_Wins.Text == "2")
             {
 
-                StreamWriter MainFile = new StreamWriter(@"..\Data\" + ddl_Size.Text + "/No_Advantage.txt");
+                StreamWriter MainFile = new StreamWriter(@"Data\" + ddl_Size.Text + "/No_Advantage.txt");
 
                 for (iCount = 0; iCount < MyMissions.m_MyMissions.Count; iCount++)
                 {
@@ -283,7 +283,7 @@ namespace Warhammer_Mission_Generator
             if (lbl_Attacker_Wins.Text == "0")
             {
 
-                using (StreamReader sr = new StreamReader(@"..\Data\" + ddl_Size.Text + "/Played/Defender_Advantage.txt"))
+                using (StreamReader sr = new StreamReader(@"Data\" + ddl_Size.Text + "/Played/Defender_Advantage.txt"))
                 {
 
                     string sline;
@@ -302,7 +302,7 @@ namespace Warhammer_Mission_Generator
             else if (lbl_Attacker_Wins.Text == "1")
             {
 
-                using (StreamReader sr = new StreamReader(@"..\Data\" + ddl_Size.Text + "/Played/Attacker_Advantage.txt"))
+                using (StreamReader sr = new StreamReader(@"Data\" + ddl_Size.Text + "/Played/Attacker_Advantage.txt"))
                 {
 
                     string sline;
@@ -321,7 +321,7 @@ namespace Warhammer_Mission_Generator
             else if (lbl_Attacker_Wins.Text == "2")
             {
 
-                using (StreamReader sr = new StreamReader(@"..\Data\" + ddl_Size.Text + "/Played/No_Advantage.txt"))
+                using (StreamReader sr = new StreamReader(@"Data\" + ddl_Size.Text + "/Played/No_Advantage.txt"))
                 {
 
                     string sline;
@@ -355,7 +355,7 @@ namespace Warhammer_Mission_Generator
             if (lbl_Attacker_Wins.Text == "0")
             {
 
-                using (StreamReader sr = new StreamReader(@"..\Data\" + ddl_Size.Text + "/Defender_Advantage.txt"))
+                using (StreamReader sr = new StreamReader(@"Data\" + ddl_Size.Text + "/Defender_Advantage.txt"))
                 {
 
                     string sline;
@@ -374,7 +374,7 @@ namespace Warhammer_Mission_Generator
 
                     string sline;
 
-                    using (StreamReader sr2 = new StreamReader(@"..\Data\" + ddl_Size.Text + "/Played/Defender_Advantage.txt"))
+                    using (StreamReader sr2 = new StreamReader(@"Data\" + ddl_Size.Text + "/Played/Defender_Advantage.txt"))
                     {
 
                         while ((sline = sr2.ReadLine()) != null)
@@ -386,10 +386,10 @@ namespace Warhammer_Mission_Generator
 
                     }
 
-                    File.WriteAllText(@"..\Data\" + ddl_Size.Text + "/Played/Defender_Advantage.txt", String.Empty);
-                    File.WriteAllText(@"..\Data\" + ddl_Size.Text + "/Defender_Advantage.txt", String.Empty);
+                    File.WriteAllText(@"Data\" + ddl_Size.Text + "/Played/Defender_Advantage.txt", String.Empty);
+                    File.WriteAllText(@"Data\" + ddl_Size.Text + "/Defender_Advantage.txt", String.Empty);
 
-                    StreamWriter MainFile = new StreamWriter(@"..\Data\" + ddl_Size.Text + "/Defender_Advantage.txt");
+                    StreamWriter MainFile = new StreamWriter(@"Data\" + ddl_Size.Text + "/Defender_Advantage.txt");
 
                     for (int iCount = 0; iCount < MyMissions.Count; iCount++)
                     {
@@ -407,7 +407,7 @@ namespace Warhammer_Mission_Generator
             else if (lbl_Attacker_Wins.Text == "1")
             {
 
-                using (StreamReader sr = new StreamReader(@"..\Data\" + ddl_Size.Text + "/Attacker_Advantage.txt"))
+                using (StreamReader sr = new StreamReader(@"Data\" + ddl_Size.Text + "/Attacker_Advantage.txt"))
                 {
 
                     string sline;
@@ -426,7 +426,7 @@ namespace Warhammer_Mission_Generator
 
                     string sline;
 
-                    using (StreamReader sr2 = new StreamReader(@"..\Data\" + ddl_Size.Text + "/Played/Attacker_Advantage.txt"))
+                    using (StreamReader sr2 = new StreamReader(@"Data\" + ddl_Size.Text + "/Played/Attacker_Advantage.txt"))
                     {
 
                         while ((sline = sr2.ReadLine()) != null)
@@ -438,10 +438,10 @@ namespace Warhammer_Mission_Generator
 
                     }
 
-                    File.WriteAllText(@"..\Data\" + ddl_Size.Text + "/Played/Attacker_Advantage.txt", String.Empty);
-                    File.WriteAllText(@"..\Data\" + ddl_Size.Text + "/Attacker_Advantage.txt", String.Empty);
+                    File.WriteAllText(@"Data\" + ddl_Size.Text + "/Played/Attacker_Advantage.txt", String.Empty);
+                    File.WriteAllText(@"Data\" + ddl_Size.Text + "/Attacker_Advantage.txt", String.Empty);
 
-                    StreamWriter MainFile = new StreamWriter(@"..\Data\" + ddl_Size.Text + "/Attacker_Advantage.txt");
+                    StreamWriter MainFile = new StreamWriter(@"Data\" + ddl_Size.Text + "/Attacker_Advantage.txt");
 
                     for (int iCount = 0; iCount < MyMissions.Count; iCount++)
                     {
@@ -459,7 +459,7 @@ namespace Warhammer_Mission_Generator
             else if (lbl_Attacker_Wins.Text == "2")
             {
 
-                using (StreamReader sr = new StreamReader(@"..\Data\" + ddl_Size.Text + "/No_Advantage.txt"))
+                using (StreamReader sr = new StreamReader(@"Data\" + ddl_Size.Text + "/No_Advantage.txt"))
                 {
 
                     string sline;
@@ -478,7 +478,7 @@ namespace Warhammer_Mission_Generator
 
                     string sline;
 
-                    using (StreamReader sr2 = new StreamReader(@"..\Data\" + ddl_Size.Text + "/Played/No_Advantage.txt"))
+                    using (StreamReader sr2 = new StreamReader(@"Data\" + ddl_Size.Text + "/Played/No_Advantage.txt"))
                     {
 
                         while ((sline = sr2.ReadLine()) != null)
@@ -490,10 +490,10 @@ namespace Warhammer_Mission_Generator
 
                     }
 
-                    File.WriteAllText(@"..\Data\" + ddl_Size.Text + "/Played/No_Advantage.txt", String.Empty);
-                    File.WriteAllText(@"..\Data\" + ddl_Size.Text + "/No_Advantage.txt", String.Empty);
+                    File.WriteAllText(@"Data\" + ddl_Size.Text + "/Played/No_Advantage.txt", String.Empty);
+                    File.WriteAllText(@"Data\" + ddl_Size.Text + "/No_Advantage.txt", String.Empty);
 
-                    StreamWriter MainFile = new StreamWriter(@"..\Data\" + ddl_Size.Text + "/No_Advantage.txt");
+                    StreamWriter MainFile = new StreamWriter(@"Data\" + ddl_Size.Text + "/No_Advantage.txt");
 
                     for (int iCount = 0; iCount < MyMissions.Count; iCount++)
                     {
@@ -525,7 +525,7 @@ namespace Warhammer_Mission_Generator
             int iCount = 0;
             string[] sPlayers = new string[2];
 
-            using (StreamReader sr = new StreamReader(@"..\Data\Players.txt"))
+            using (StreamReader sr = new StreamReader(@"Data\Players.txt"))
             {
 
                 for (iCount = 0; iCount < 2; iCount++)
