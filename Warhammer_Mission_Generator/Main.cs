@@ -14,6 +14,22 @@ namespace Warhammer_Mission_Generator
 {
     public partial class frm_Main : Form
     {
+        public class Missions
+        {
+
+            public string m_sMission { get; set; }
+            public string m_sReference { get; set; }
+
+        }
+
+        public static class MyMissions
+        {
+
+            public static List<Missions> m_MyMissions = new List<Missions>();
+            public static int m_iSelected { get; set; }
+
+        }
+
         public frm_Main()
         {
             InitializeComponent();
@@ -132,69 +148,35 @@ namespace Warhammer_Mission_Generator
 
         }
 
-        private string[,] Download_Missions(string sAttackerWinner)
+        private void Save_Next_Missions()
         {
 
-            string[,] sMissions = new string[1,1]; ;
-            int iTotal = 0;
             int iCount = 0;
+            MyMissions.m_MyMissions.RemoveAt(MyMissions.m_iSelected);
 
-            if (sAttackerWinner == "0")
+            if (lbl_Attacker_Wins.Text == "0")
             {
 
-                using (StreamReader sr = new StreamReader(@"..\Data\" + ddl_Size.Text + "/Attack_Advantage.txt"))
-                {
-
-                    iTotal = int.Parse(sr.ReadLine());
-                    sMissions = new string[iTotal, 2];
-
-                    for (iCount = 0; iCount < iTotal; iCount++)
-                    {
-
-                        sMissions[iCount, 0] = sr.ReadLine();
-                        sMissions[iCount, 1] = sr.ReadLine();
-
-                    }
-
-                }
+                
 
             }
-            else if (sAttackerWinner == "1")
+            else if (lbl_Attacker_Wins.Text == "1")
             {
 
-                using (StreamReader sr = new StreamReader(@"..\Data\" + ddl_Size.Text + "/Defender_Advantage.txt"))
-                {
-
-                    iTotal = int.Parse(sr.ReadLine());
-                    sMissions = new string[iTotal, 2];
-
-                    for (iCount = 0; iCount < iTotal; iCount++)
-                    {
-
-                        sMissions[iCount, 0] = sr.ReadLine();
-                        sMissions[iCount, 1] = sr.ReadLine();
-
-                    }
-
-                }
+                
 
             }
-            else if (sAttackerWinner == "2")
+            else if (lbl_Attacker_Wins.Text == "2")
             {
 
-                using (StreamReader sr = new StreamReader(@"..\Data\" + ddl_Size.Text + "/No_Advantage.txt"))
+                StreamWriter MainFile = new StreamWriter(@"..\Data\" + ddl_Size.Text + "/No_Advantage.txt");
+
+                for (iCount = 0; iCount < MyMissions.m_MyMissions.Count; iCount++)
                 {
 
-                    iTotal = int.Parse(sr.ReadLine());
-                    sMissions = new string[iTotal, 2];
-
-                    for (iCount = 0; iCount < iTotal; iCount++)
-                    {
-
-                        sMissions[iCount, 0] = sr.ReadLine();
-                        sMissions[iCount, 1] = sr.ReadLine();
-
-                    }
+                    MainFile.Write(MyMissions.m_MyMissions[0].m_sMission + "\r\n");
+                    MainFile.Write(MyMissions.m_MyMissions[0].m_sReference + "\r\n");
+                    MainFile.Close();
 
                 }
 
@@ -206,7 +188,77 @@ namespace Warhammer_Mission_Generator
 
             }
 
-            return sMissions;
+        }
+
+        private List<Missions> Download_Missions()
+        {
+
+            List<Missions> MyMissions = new List<Missions>();
+
+            if (lbl_Attacker_Wins.Text == "0")
+            {
+
+                using (StreamReader sr = new StreamReader(@"..\Data\" + ddl_Size.Text + "/Attack_Advantage.txt"))
+                {
+
+                    string sline;
+                    string[] NextMission = new string[2];
+
+                    while ((sline = sr.ReadLine()) != null)
+                    {
+
+                        MyMissions.Add(new Missions { m_sMission = sline, m_sReference = sr.ReadLine() });
+
+                    }
+
+                }
+
+            }
+            else if (lbl_Attacker_Wins.Text == "1")
+            {
+
+                using (StreamReader sr = new StreamReader(@"..\Data\" + ddl_Size.Text + "/Defender_Advantage.txt"))
+                {
+
+                    string sline;
+                    string[] NextMission = new string[2];
+
+                    while ((sline = sr.ReadLine()) != null)
+                    {
+
+                        MyMissions.Add(new Missions { m_sMission = sline, m_sReference = sr.ReadLine() });
+
+                    }
+
+                }
+
+            }
+            else if (lbl_Attacker_Wins.Text == "2")
+            {
+
+                using (StreamReader sr = new StreamReader(@"..\Data\" + ddl_Size.Text + "/No_Advantage.txt"))
+                {
+
+                    string sline;
+                    string[] NextMission = new string[2];
+
+                    while ((sline = sr.ReadLine()) != null)
+                    {
+
+                        MyMissions.Add(new Missions { m_sMission = sline, m_sReference = sr.ReadLine() });
+
+                    }
+                }
+
+            }
+            else
+            {
+
+                Error_Message();
+
+            }
+
+            return MyMissions;
 
         }
 
@@ -443,19 +495,29 @@ namespace Warhammer_Mission_Generator
             else if (lbl_Tracker.Text == "5")
             {
 
-                btn_Submit.Visible = false;
-                btn_Submit.Enabled = false;
+                Random rnd = new Random();
+
+                btn_Submit.Location = new Point(215, 359);
+                btn_Submit.Text =  "Played";
 
                 lbl_Result.Visible = false;
 
-                string[,] sMissions;
-                Random rnd = new Random();
+                MyMissions.m_MyMissions = Download_Missions();
+                MyMissions.m_iSelected = rnd.Next(0, MyMissions.m_MyMissions.Count);
 
-                sMissions = Download_Missions(lbl_Attacker_Wins.Text);
-                lbl_Mission.Text = rnd.Next(0, sMissions.GetLength(0)).ToString();
+                lbl_Mission.Text = MyMissions.m_MyMissions[MyMissions.m_iSelected].m_sMission;
+                lbl_Mission_Reference.Text = MyMissions.m_MyMissions[MyMissions.m_iSelected].m_sReference;
 
-                //MAKE SELECTION STATEMENTS
-                
+                lbl_Mission.Visible = true;
+                lbl_Mission_Reference.Visible = true;
+                lbl_Tracker.Text = "6";
+
+            }
+            else if (lbl_Tracker.Text == "6")
+            {
+
+                Save_Next_Missions();
+
             }
             else
             {

@@ -187,7 +187,7 @@ namespace Warhammer_Mission_Generator
             this.btn_Submit.BackColor = System.Drawing.Color.Ivory;
             this.btn_Submit.Enabled = false;
             this.btn_Submit.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Submit.Location = new System.Drawing.Point(215, 196);
+            this.btn_Submit.Location = new System.Drawing.Point(215, 359);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(109, 45);
             this.btn_Submit.TabIndex = 11;
@@ -315,7 +315,7 @@ namespace Warhammer_Mission_Generator
             // 
             this.lbl_Mission_Reference.AutoSize = true;
             this.lbl_Mission_Reference.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Mission_Reference.Location = new System.Drawing.Point(69, 320);
+            this.lbl_Mission_Reference.Location = new System.Drawing.Point(55, 320);
             this.lbl_Mission_Reference.Name = "lbl_Mission_Reference";
             this.lbl_Mission_Reference.Size = new System.Drawing.Size(68, 19);
             this.lbl_Mission_Reference.TabIndex = 22;
