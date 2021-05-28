@@ -798,7 +798,7 @@ namespace Warhammer_Mission_Generator
                 btn_Submit.Text =  "Played";
 
                 lbl_Result.Visible = false;
-                lbl_CP_Paid.Text = lbl_Name1 + " paid: " + lbl_Player_1_CP.Text + ", " + lbl_Name2 + " paid: " + lbl_Player_2_CP.Text;
+                lbl_CP_Paid.Text = lbl_Name1.Text + " paid: " + lbl_Player_1_CP.Text + ", " + lbl_Name2.Text + " paid: " + lbl_Player_2_CP.Text;
                 lbl_CP_Paid.Visible = true;
 
                 MyMissions.m_MyMissions = Download_Next_Missions();
