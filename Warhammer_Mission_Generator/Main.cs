@@ -47,6 +47,10 @@ namespace Warhammer_Mission_Generator
 
             lbl_Tracker.Text = "4";
 
+            lbl_CP_Cost_1.Visible = false;
+            lbl_CP_Cost_2.Visible = false;
+            lbl_CP_Cost_3.Visible = false;
+
             btn_Selection_1.Visible = false;
             btn_Selection_1.Enabled = false;
 
@@ -118,6 +122,38 @@ namespace Warhammer_Mission_Generator
             btn_Selection_3.Enabled = true;
             btn_Selection_3.Location = new Point(220, 247);
             lbl_PlayerMessage.Visible = true;
+
+            lbl_CP_Cost_1.Visible = true;
+            lbl_CP_Cost_2.Visible = true;
+            lbl_CP_Cost_3.Visible = true;
+
+            if (ddl_Size.Text == "Combat Patrol" || ddl_Size.Text == "Incursion")
+            {
+
+                lbl_CP_Cost_2.Text = "1CP";
+                lbl_CP_Cost_3.Text = "1CP";
+
+            }
+            else if (ddl_Size.Text == "Strike Force")
+            {
+
+                lbl_CP_Cost_2.Text = "2CP";
+                lbl_CP_Cost_3.Text = "2CP";
+
+            }
+            else if (ddl_Size.Text == "Onslaught")
+            {
+
+                lbl_CP_Cost_2.Text = "3CP";
+                lbl_CP_Cost_3.Text = "3CP";
+
+            }
+            else
+            {
+
+                Error_Message();
+
+            }
 
             if (lbl_IsAttacker.Text == "1")
             {
@@ -613,6 +649,10 @@ namespace Warhammer_Mission_Generator
                 lbl_Result.Visible = false;
                 lbl_PlayerMessage.Visible = false;
 
+                lbl_CP_Cost_1.Visible = false;
+                lbl_CP_Cost_2.Visible = false;
+                lbl_CP_Cost_3.Visible = false;
+
                 lbl_Tracker.Text = "0";
 
             }
@@ -683,6 +723,8 @@ namespace Warhammer_Mission_Generator
                 btn_Submit.Location = new Point(203, 247);
                 btn_Submit.Size = new Size(136, 45);
                 btn_Submit.Text = "Generate";
+
+                lbl_CP_Paid.Text = lbl_Name1 + " paid: " + lbl_Player_1_CP.Text + ", " + lbl_Name2 + " paid: " + lbl_Player_2_CP.Text;
 
                 if ((lbl_Player1_Selection.Text == "0" && lbl_Player2_Selection.Text == "1") || (lbl_Player1_Selection.Text == "1" && lbl_Player2_Selection.Text == "2") || (lbl_Player1_Selection.Text == "2" && lbl_Player2_Selection.Text == "0"))
                 {
@@ -758,6 +800,7 @@ namespace Warhammer_Mission_Generator
                 btn_Submit.Text =  "Played";
 
                 lbl_Result.Visible = false;
+                lbl_CP_Paid.Visible = false;
 
                 MyMissions.m_MyMissions = Download_Next_Missions();
                 MyMissions.m_iSelected = rnd.Next(0, MyMissions.m_MyMissions.Count);
@@ -805,6 +848,7 @@ namespace Warhammer_Mission_Generator
             {
 
                 lbl_Player1_Selection.Text = "0";
+                lbl_Player_1_CP.Text = lbl_CP_Cost_1.Text;
                 Set_After_First_Maneuver();
 
             }
@@ -812,6 +856,7 @@ namespace Warhammer_Mission_Generator
             {
 
                 lbl_Player2_Selection.Text = "0";
+                lbl_Player_2_CP.Text = lbl_CP_Cost_1.Text;
                 Set_After_Second_Maneuver();
 
             }
@@ -839,6 +884,7 @@ namespace Warhammer_Mission_Generator
             {
 
                 lbl_Player1_Selection.Text = "2";
+                lbl_Player_1_CP.Text = lbl_CP_Cost_3.Text;
                 Set_After_First_Maneuver();
 
             }
@@ -846,6 +892,7 @@ namespace Warhammer_Mission_Generator
             {
 
                 lbl_Player2_Selection.Text = "2";
+                lbl_Player_2_CP.Text = lbl_CP_Cost_3.Text;
                 Set_After_Second_Maneuver();
 
             }
@@ -865,6 +912,7 @@ namespace Warhammer_Mission_Generator
             {
 
                 lbl_Player1_Selection.Text = "1";
+                lbl_Player_1_CP.Text = lbl_CP_Cost_2.Text;
                 Set_After_First_Maneuver();
 
             }
@@ -872,6 +920,7 @@ namespace Warhammer_Mission_Generator
             {
 
                 lbl_Player2_Selection.Text = "1";
+                lbl_Player_2_CP.Text = lbl_CP_Cost_2.Text;
                 Set_After_Second_Maneuver();
 
             }

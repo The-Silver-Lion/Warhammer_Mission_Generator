@@ -52,6 +52,12 @@ namespace Warhammer_Mission_Generator
             this.lbl_PlayerMessage = new System.Windows.Forms.Label();
             this.lbl_Attacker_Wins = new System.Windows.Forms.Label();
             this.lbl_Mission_Reference = new System.Windows.Forms.Label();
+            this.lbl_CP_Paid = new System.Windows.Forms.Label();
+            this.lbl_Player_2_CP = new System.Windows.Forms.Label();
+            this.lbl_Player_1_CP = new System.Windows.Forms.Label();
+            this.lbl_CP_Cost_2 = new System.Windows.Forms.Label();
+            this.lbl_CP_Cost_1 = new System.Windows.Forms.Label();
+            this.lbl_CP_Cost_3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_Title
@@ -211,7 +217,7 @@ namespace Warhammer_Mission_Generator
             // 
             this.lbl_Result.AutoSize = true;
             this.lbl_Result.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Result.Location = new System.Drawing.Point(55, 209);
+            this.lbl_Result.Location = new System.Drawing.Point(55, 202);
             this.lbl_Result.Name = "lbl_Result";
             this.lbl_Result.Size = new System.Drawing.Size(69, 19);
             this.lbl_Result.TabIndex = 13;
@@ -325,12 +331,82 @@ namespace Warhammer_Mission_Generator
             this.lbl_Mission_Reference.Text = "*TEXT* ";
             this.lbl_Mission_Reference.Visible = false;
             // 
+            // lbl_CP_Paid
+            // 
+            this.lbl_CP_Paid.AutoSize = true;
+            this.lbl_CP_Paid.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_CP_Paid.Location = new System.Drawing.Point(55, 225);
+            this.lbl_CP_Paid.Name = "lbl_CP_Paid";
+            this.lbl_CP_Paid.Size = new System.Drawing.Size(39, 16);
+            this.lbl_CP_Paid.TabIndex = 23;
+            this.lbl_CP_Paid.Text = "*CP*";
+            this.lbl_CP_Paid.Visible = false;
+            // 
+            // lbl_Player_2_CP
+            // 
+            this.lbl_Player_2_CP.AutoSize = true;
+            this.lbl_Player_2_CP.Location = new System.Drawing.Point(62, 112);
+            this.lbl_Player_2_CP.Name = "lbl_Player_2_CP";
+            this.lbl_Player_2_CP.Size = new System.Drawing.Size(13, 13);
+            this.lbl_Player_2_CP.TabIndex = 25;
+            this.lbl_Player_2_CP.Text = "0";
+            this.lbl_Player_2_CP.Visible = false;
+            // 
+            // lbl_Player_1_CP
+            // 
+            this.lbl_Player_1_CP.AutoSize = true;
+            this.lbl_Player_1_CP.Location = new System.Drawing.Point(62, 76);
+            this.lbl_Player_1_CP.Name = "lbl_Player_1_CP";
+            this.lbl_Player_1_CP.Size = new System.Drawing.Size(13, 13);
+            this.lbl_Player_1_CP.TabIndex = 24;
+            this.lbl_Player_1_CP.Text = "0";
+            this.lbl_Player_1_CP.Visible = false;
+            // 
+            // lbl_CP_Cost_2
+            // 
+            this.lbl_CP_Cost_2.AutoSize = true;
+            this.lbl_CP_Cost_2.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_CP_Cost_2.Location = new System.Drawing.Point(255, 286);
+            this.lbl_CP_Cost_2.Name = "lbl_CP_Cost_2";
+            this.lbl_CP_Cost_2.Size = new System.Drawing.Size(32, 16);
+            this.lbl_CP_Cost_2.TabIndex = 26;
+            this.lbl_CP_Cost_2.Text = "1CP";
+            this.lbl_CP_Cost_2.Visible = false;
+            // 
+            // lbl_CP_Cost_1
+            // 
+            this.lbl_CP_Cost_1.AutoSize = true;
+            this.lbl_CP_Cost_1.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_CP_Cost_1.Location = new System.Drawing.Point(145, 286);
+            this.lbl_CP_Cost_1.Name = "lbl_CP_Cost_1";
+            this.lbl_CP_Cost_1.Size = new System.Drawing.Size(32, 16);
+            this.lbl_CP_Cost_1.TabIndex = 27;
+            this.lbl_CP_Cost_1.Text = "0CP";
+            this.lbl_CP_Cost_1.Visible = false;
+            // 
+            // lbl_CP_Cost_3
+            // 
+            this.lbl_CP_Cost_3.AutoSize = true;
+            this.lbl_CP_Cost_3.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_CP_Cost_3.Location = new System.Drawing.Point(367, 286);
+            this.lbl_CP_Cost_3.Name = "lbl_CP_Cost_3";
+            this.lbl_CP_Cost_3.Size = new System.Drawing.Size(32, 16);
+            this.lbl_CP_Cost_3.TabIndex = 28;
+            this.lbl_CP_Cost_3.Text = "1CP";
+            this.lbl_CP_Cost_3.Visible = false;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(557, 520);
+            this.Controls.Add(this.lbl_CP_Cost_3);
+            this.Controls.Add(this.lbl_CP_Cost_1);
+            this.Controls.Add(this.lbl_CP_Cost_2);
+            this.Controls.Add(this.lbl_Player_2_CP);
+            this.Controls.Add(this.lbl_Player_1_CP);
+            this.Controls.Add(this.lbl_CP_Paid);
             this.Controls.Add(this.lbl_Mission_Reference);
             this.Controls.Add(this.lbl_Attacker_Wins);
             this.Controls.Add(this.lbl_PlayerMessage);
@@ -389,5 +465,11 @@ namespace Warhammer_Mission_Generator
         private System.Windows.Forms.Label lbl_PlayerMessage;
         private System.Windows.Forms.Label lbl_Attacker_Wins;
         private System.Windows.Forms.Label lbl_Mission_Reference;
+        private System.Windows.Forms.Label lbl_CP_Paid;
+        private System.Windows.Forms.Label lbl_Player_2_CP;
+        private System.Windows.Forms.Label lbl_Player_1_CP;
+        private System.Windows.Forms.Label lbl_CP_Cost_2;
+        private System.Windows.Forms.Label lbl_CP_Cost_1;
+        private System.Windows.Forms.Label lbl_CP_Cost_3;
     }
 }
