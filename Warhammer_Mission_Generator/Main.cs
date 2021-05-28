@@ -722,7 +722,7 @@ namespace Warhammer_Mission_Generator
                     else if (lbl_IsAttacker.Text == "1")
                     {
 
-                        lbl_Attacker_Wins.Text = "1";
+                        lbl_Attacker_Wins.Text = "0";
 
                     }
                     else 
