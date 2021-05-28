@@ -652,6 +652,7 @@ namespace Warhammer_Mission_Generator
                 lbl_CP_Cost_1.Visible = false;
                 lbl_CP_Cost_2.Visible = false;
                 lbl_CP_Cost_3.Visible = false;
+                lbl_CP_Paid.Visible = false;
 
                 lbl_Tracker.Text = "0";
 
