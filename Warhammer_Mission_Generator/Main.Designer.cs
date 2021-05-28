@@ -241,6 +241,7 @@ namespace Warhammer_Mission_Generator
             this.lbl_Player1_Selection.Size = new System.Drawing.Size(13, 13);
             this.lbl_Player1_Selection.TabIndex = 15;
             this.lbl_Player1_Selection.Text = "0";
+            this.lbl_Player1_Selection.Visible = false;
             // 
             // lbl_Player2_Selection
             // 
@@ -250,6 +251,7 @@ namespace Warhammer_Mission_Generator
             this.lbl_Player2_Selection.Size = new System.Drawing.Size(13, 13);
             this.lbl_Player2_Selection.TabIndex = 16;
             this.lbl_Player2_Selection.Text = "0";
+            this.lbl_Player2_Selection.Visible = false;
             // 
             // btn_Close
             // 
@@ -310,6 +312,7 @@ namespace Warhammer_Mission_Generator
             this.lbl_Attacker_Wins.Size = new System.Drawing.Size(13, 13);
             this.lbl_Attacker_Wins.TabIndex = 21;
             this.lbl_Attacker_Wins.Text = "0";
+            this.lbl_Attacker_Wins.Visible = false;
             // 
             // lbl_Mission_Reference
             // 
