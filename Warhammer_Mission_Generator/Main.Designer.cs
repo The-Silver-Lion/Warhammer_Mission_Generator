@@ -303,7 +303,7 @@ namespace Warhammer_Mission_Generator
             // 
             this.lbl_PlayerMessage.AutoSize = true;
             this.lbl_PlayerMessage.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PlayerMessage.Location = new System.Drawing.Point(55, 301);
+            this.lbl_PlayerMessage.Location = new System.Drawing.Point(109, 312);
             this.lbl_PlayerMessage.Name = "lbl_PlayerMessage";
             this.lbl_PlayerMessage.Size = new System.Drawing.Size(68, 19);
             this.lbl_PlayerMessage.TabIndex = 20;
